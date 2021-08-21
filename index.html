@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind cdn -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Mac Book pro!</title>
+    <!-- custom css -->
+    <style>
+        button:hover{
+            background-color: black;
+            color: white; 
+        }
+    </style>
+</head>
+<body>
+    <!-- header  -->
+    <header>
+        <h1 class="text-5xl font-semibold text-center p-4">We looking forward to welcoming you to our store.</h1>
+        <p class="text-center border-b-2">Whether you shop in a store os shop online, Our Specialists can help you buy the products you love.</p>
+    </header>
+    <section class="grid grid-cols-2 gap-4 mt-8">
+        <!-- image -->
+            <div class="w-3/5 mx-auto">
+                <img src="images/mac.png" alt="">
+            </div>
+            <!--  product specification -->
+            <div class="w-4/5 mx-auto"> 
+                <div>
+                <h3 class="text-3xl">Customize your Blue 24-inch iMac with Apple M1 chip.</h3>
+                <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core Nerual Engine 8GB unified memory 256GB SSD storage Two Thunderbolt/USB 4 ports Magic Mouse Magic Keyboard-US English.</p>
+                </div>
+                <!-- Memory customization -->
+                <div>
+                    <h4 class="text-2xl font-semibold mt-12 mb-1">Memory</h4>
+                    <button id="memory-8" class="border border-gray-400 rounded p-1">8GB unified memory</button>
+                    <button id="memory-16" class="border border-gray-400 rounded p-1">16GB unified memory</button>
+                </div>
+                <!-- storage Customization -->
+                <div>
+                    <h4 class="text-2xl font-semibold mt-12 mb-1">Storage</h4>
+                    <button id="storage-256" class="border border-gray-400 rounded p-1">256GB SSD Storage</button>
+                    <button id="storage-512" class="border border-gray-400 rounded p-1">512GB SSD Storage</button>
+                    <button id="storage-1TB" class="border border-gray-400 rounded p-1">1GB SSD Storage</button>
+                </div>
+                <!-- product delivery time -->
+                <div>
+                    <h4 class="text-2xl font-semibold mt-12 mb-1">Choose your delivery option</h4>
+                    <button id="free-delivery" class="border border-gray-400 rounded p-1">Friday,Aug 25 FREE prime Delivery</button>
+                    <button id="charge-delivery" class="border border-gray-400 rounded p-1">Friday,Aug 21 Delivery charge $20</button>
+                </div>
+                <!-- product price count-->
+                <div class="divide-y font-bold mt-12 my-4">
+                    <div class="flex justify-between mb-4">
+                        <h4>Best Price</h4>
+                        <h4>$<span id="best-price">1299</span></h4>
+                    </div>
+                    <!-- Extra memory price count-->
+                    <div class="flex justify-between mb-4">
+                        <h4>Extra Memory Cost</h4>
+                        <h4>$<span id="memory-cost">0</span></h4>
+                    </div>
+                    <!-- Extra storage price count -->
+                    <div class="flex justify-between mb-4">
+                        <h4>Extra Storage Cost</h4>
+                        <h4>$<span id="storage-cost">0</span></h4>
+                    </div>
+                    <!-- delivery charge -->
+                    <div class="flex justify-between mb-4">
+                            <h4>Delivery Charge</h4>
+                            <h4>$<span id="delivery-cost">0</span></h4>
+                    </div>
+                    <!-- Total price count -->
+                    <div class="flex justify-between border-b-2 border-black mb-4">
+                        <h4>Total Price</h4>
+                        <h4>$<span id="total-price">1299</span></h4>
+                    </div>
+                    <hr>
+                </div>
+                <!-- Promo code area -->
+                <div class="my-4">
+                    <input id="promo-input" class="border border-gray-400 rounded p-1" type="text">
+                    <button id="promo-btn" class="bg-red-600 px-2 py-1 rounded text-white">Apply</button>
+                </div>
+            </div>   
+    </section>
+    <section>
+        <!-- Product Total Price count -->
+        <div class="w-4/5 mx-auto">
+            <hr>
+           <h1 class="text-5xl font-blod text-center">Total: $<span id="total-amount">1299</span></h1> 
+        </div>
+    </section>
+    <!-- js link -->
+    <script src="custom.js"></script>
+</body>
+</html>
