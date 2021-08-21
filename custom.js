@@ -13,6 +13,9 @@ function updateMemory(memoryType){
     // totalCost  call
     const totalCost = document.getElementById('total-price');
     totalCost.innerText = getTotalCost();
+    // total amount call
+    const totalAmount = document.getElementById('total-amount');
+    totalAmount.innerText = getTotalAmount();
     
 }
 
@@ -33,6 +36,9 @@ function updateStorage(storageType){
     // totalCost  call
     const totalCost = document.getElementById('total-price');
     totalCost.innerText = getTotalCost();
+    // total amount call
+    const totalAmount = document.getElementById('total-amount');
+    totalAmount.innerText = getTotalAmount();
 }
 
 //  delivery charge  update
@@ -49,6 +55,9 @@ function chargeDelivery(deliveryType){
     // totalCost  call
     const totalCost = document.getElementById('total-price');
     totalCost.innerText = getTotalCost();
+    // total amount call
+    const totalAmount = document.getElementById('total-amount');
+    totalAmount.innerText = getTotalAmount();
 }
 
 
@@ -61,6 +70,15 @@ function getTotalCost(){
     const deliveryPrice = document.getElementById('delivery-cost').innerText;
     const totalCost = parseInt(bestPrice) + parseInt(memoryPrice) + parseInt(storagePrice) + parseInt(deliveryPrice) 
     return totalCost;
+}
+
+function getTotalAmount(){
+    const bestPrice = document.getElementById('best-price').innerText;
+    const memoryPrice = document.getElementById('memory-cost').innerText;
+    const storagePrice = document.getElementById('storage-cost').innerText;
+    const deliveryPrice = document.getElementById('delivery-cost').innerText;
+    const totalAmount = parseInt(bestPrice) + parseInt(memoryPrice) + parseInt(storagePrice) + parseInt(deliveryPrice) 
+    return totalAmount;
 }
 
 // memory 8gb event handler
@@ -105,6 +123,8 @@ document.getElementById('promo-btn').addEventListener('click', function(event){
     } 
     promoCode.value = '';
 });
+
+
 
 
 
