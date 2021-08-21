@@ -1,8 +1,7 @@
 // memory price update
 function updateMemory(memoryType){
     const memoryCost = document.getElementById('memory-cost');
-    
-    
+     
     if(memoryType == 'memory-8'){
         memoryCost.innerText = 0;
         
@@ -71,7 +70,7 @@ function getTotalCost(){
     const totalCost = parseInt(bestPrice) + parseInt(memoryPrice) + parseInt(storagePrice) + parseInt(deliveryPrice) 
     return totalCost;
 }
-
+// total amount update
 function getTotalAmount(){
     const bestPrice = document.getElementById('best-price').innerText;
     const memoryPrice = document.getElementById('memory-cost').innerText;
@@ -121,6 +120,7 @@ document.getElementById('promo-btn').addEventListener('click', function(event){
     else {
         alert ("Invalid promo code!!!!")
     } 
+    // clear input value
     promoCode.value = '';
 });
 
